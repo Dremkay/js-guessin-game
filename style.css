@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    /* background-color: rgb(223, 229, 235); */
+    background-color: rgb(227, 236, 245);
+    
+}
+.container{  
+    padding: 20px;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: aliceblue;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+ul{
+    display: flex;
+}
+ul li{
+    padding: 0 5px;
+}
+main{
+    width: 350px;
+    margin: 50px auto;
+    border-style: solid;
+    border-width: 1px;
+    padding: 20px;
+}
+
+section{
+    width: 225px;
+}
+
+input{
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+}
+button{
+    font-size: 20px;
+    padding: 10px 20px;
+}
+.btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#btn1{
+    background-color: rgb(102, 146, 146);
+    color: rgb(136, 255, 0);
+    /* margin-right: 10px; */
+}
+#btn2{
+    background-color: rgb(215, 238, 111);
+    color: rgb(0, 102, 255);
+}
+
+.message{
+    margin: 20px;
+    text-align: center;
+    font-style: italic;
+    font-size: 24px;
+    /* font-weight:bold; */
+}
+
+.success{
+    color: rgb(6, 245, 6);
+}
+.failed{
+    color: red;
+}
+footer{
+    text-align: center;
+    background-color: rgb(25, 41, 36);
+    color: wheat;
+    padding: 20px;
+}
+
