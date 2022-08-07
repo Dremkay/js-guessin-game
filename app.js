@@ -6,6 +6,7 @@ document.querySelector("#btn2").addEventListener('click',clear)
 const success = document.querySelector(".success")
 const failed = document.querySelector(".failed")
 const life = document.querySelector("#lives")
+life.innerHTML=`<h1>${lives}`
 
 
 function guess() {
