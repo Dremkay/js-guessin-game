@@ -21,21 +21,36 @@ life.innerHTML=`<h1>${lives}`
 
 export function guess() {
     // if (lives!=0){
-    if (lives!=0){
+    if (lives >=1){
         const userInput = Number(document.querySelector("#userInput").value)
         // console.log(`Type: ${typeof userInput}, User guessed: ${userInput}`)
         if (userInput != randomNumber){
             success.innerHTML=''
+
+            if (lives==1){
+                lives--
+                life.innerHTML=`<h1>${lives}`
+                failed.innerHTML = 'SORRY!, YOU HAVE EXHAUSTED YOUR CHANCES! haha!'
+                failed.innerHTML+=`<br/><br/> The answer is ${randomNumber}`
+                deactivateBtn1()
             
-            if (userInput < randomNumber && userInput!=0){
+            
+            document.querySelector("#userInput").value =''}
+            
+            else if (userInput < randomNumber && userInput!=0){
                 lives--
                 life.innerHTML=`<h1>${lives}`
                 failed.innerHTML = 'Wrong!, too <span id="low-high">low</span>'
             }else if(userInput === 0){
                 failed.innerHTML = 'Please!, enter a valid number!'
-            }else{
+            }
+            // else if(lives =1){
+
+            // }
+            else{
                 lives--
                 life.innerHTML=`<h1>${lives}`
+                
                 failed.innerHTML = 'Wrong!, too <span id="low-high">high</span>'
             }
             
@@ -50,20 +65,15 @@ export function guess() {
             // btn1.style.borderStyle = 'none'
             deactivateBtn1()
         }
-    }else{
-        failed.innerHTML = 'SORRY!, YOU HAVE EXHAUSTED YOUR CHANCES! haha!'
-        failed.innerHTML+=`<br/><br/> The answer is ${randomNumber}`
-        // console.log(btn1)
-        // btn1.removeEventListener('click', guess)
-        // btn1.style.background = 'rgb(227, 236, 245)'
-        // btn1.style.color = 'rgb(227, 236, 245)'
-        // btn1.style.borderStyle = 'none'
-        deactivateBtn1()
-
     }
-    document.querySelector("#userInput").value =''
+    // else{
+
+    //     failed.innerHTML = 'SORRY!, YOU HAVE EXHAUSTED YOUR CHANCES! haha!'
+    //     failed.innerHTML+=`<br/><br/> The answer is ${randomNumber}`
+    //     deactivateBtn1()
     
-    // if (){};
+    // }
+    // document.querySelector("#userInput").value =''
     
 }
 
@@ -86,3 +96,8 @@ function clear(){
 
 // const Game =()=>{
 
+function exhausted() {
+    failed.innerHTML = 'SORRY!, YOU HAVE EXHAUSTED YOUR CHANCES! haha!'
+    failed.innerHTML+=`<br/><br/> The answer is ${randomNumber}`
+    deactivateBtn1()    
+}
