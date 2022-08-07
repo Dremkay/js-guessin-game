@@ -11,7 +11,11 @@ body{
 }
 .container{  
     padding: 20px;
+}
 
+
+.spread{
+    display: block;
 }
 
 header{
@@ -101,3 +105,6 @@ footer{
     padding: 20px;
 }
 
+.deactivate{
+    background-color: grey;
+}
