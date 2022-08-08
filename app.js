@@ -59,10 +59,6 @@ export function guess() {
             lives--
             life.innerHTML=`<h1>${lives}`
             success.innerHTML = `Congratulations, you guessed ${randomNumber} correctly.!`
-            // btn1.removeEventListener('click', guess)
-            // btn1.style.background = 'rgb(227, 236, 245)'
-            // btn1.style.color = 'rgb(227, 236, 245)'
-            // btn1.style.borderStyle = 'none'
             deactivateBtn1()
         }
     }
@@ -73,7 +69,8 @@ export function guess() {
     //     deactivateBtn1()
     
     // }
-    // document.querySelector("#userInput").value =''
+    document.querySelector("#userInput").value =''
+    // document.querySelector("#userInput").ariaDisabled=false
     
 }
 
